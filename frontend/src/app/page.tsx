@@ -1,24 +1,21 @@
 import React from 'react'
-import { Button, Typography } from '@mui/material'
 import Link from 'next/link'
 
 const Home = () => (
-  <div style={{
-    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', overflowY: '-moz-hidden-unscrollable'
-  }}
-  >
-    <img src="/assets/logo.png" style={{ width: '200px' }} />
-    <br />
-    <br />
+  <div className="flex flex-col items-center justify-center h-screen">
+    <img src="/assets/logo.png" className="w-48 mb-8" alt="Logo" />
 
-    <Typography variant="h3" component="div">Welcome to FanLink</Typography>
-    <br />
-    <br />
-    <Typography variant="h5">I am a...</Typography>
-    <br />
-    <div style={{ display: 'flex', justifyContent: 'space-evenly', width: '30%' }}>
-      <Link href="/fan"><Button variant="contained" color="primary">Fan</Button></Link>
-      <Link href="/creator/login"><Button variant="contained" color="secondary">Creator</Button></Link>
+    <h3 className="text-3xl mb-8">Welcome to FanLink</h3>
+
+    <h5 className="text-xl mb-4">I am a...</h5>
+
+    <div className="flex justify-between w-1/3">
+      <Link href="/fan">
+        <button className="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-700">Fan</button>
+      </Link>
+      <Link href="/creator/login">
+        <button className="bg-red-600 text-white rounded py-2 px-4 hover:bg-red-700">Creator</button>
+      </Link>
     </div>
   </div>
 )
